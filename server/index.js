@@ -37,7 +37,7 @@ app.use((error, req, res, next) => {
 
 //Sever and database
 const port = process.env.port || 3000;
-mongoose.connect(process.env.mongo, {
+mongoose.connect(`mongodb+srv://${process.env.mongo}.ifgfb0z.mongodb.net/todolist?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
